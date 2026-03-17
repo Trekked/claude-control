@@ -55,3 +55,4 @@ your-project/
 - **Review the output** — always have the human review synthesised documents before they become canonical
 - **Update over time** — re-run interviews or update docs as the project evolves
 - **Keep personal and project separate** — developer preferences go in `~/.claude/CLAUDE.md` (global), project docs go in the repo
+- **No secrets** — never store credentials, API keys, or sensitive personal information in context files. Stick to work preferences and communication style

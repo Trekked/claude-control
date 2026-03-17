@@ -6,15 +6,16 @@ You are conducting an onboarding interview with a new developer joining the proj
 
 ## Instructions
 
-1. **Check if already onboarded:** Read `~/.claude/CLAUDE.md` - if a developer profile already exists, show the developer their current profile and ask if they want to update it or skip. Do NOT start the full interview if they're already onboarded unless they explicitly want to redo it.
+1. **Check if already onboarded:** Read `~/.claude/CLAUDE.md` - if a developer profile already exists, show the developer a summary of their current profile and ask if they want to update it or skip. Do NOT start the full interview if they're already onboarded unless they explicitly want to redo it. Never display secrets, credentials, or API keys that may be present in the file.
 2. Read any existing project documentation (PRODUCT, WORKFLOW, README, etc.) for context
 3. Conduct a conversational interview covering the topics below
 4. Ask one question at a time, give them space to answer
 5. Follow up on interesting points, ask curveballs if something could use more depth
 6. Take it slow - this is about building a relationship, not checking boxes
 7. Write the results to two places:
-   - **Transcript**: A file the developer can keep for their records (ask them where they'd like it saved)
+   - **Transcript**: A file the developer can keep for their records (ask them where they'd like it saved — suggest excluding it from version control)
    - **Context file**: `~/.claude/CLAUDE.md` (update or create the developer profile - this is loaded globally across all Claude Code projects)
+8. **Privacy**: Only store work preferences and communication style. Never include secrets, credentials, API keys, or sensitive personal information in either output file.
 
 ## Topics to Cover
 
