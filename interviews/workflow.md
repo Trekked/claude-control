@@ -12,7 +12,7 @@ You are establishing the development workflow for a new project. The goal is to 
 4. Challenge anything that seems unclear or contradictory - better to nail it down now
 5. Write the results to two places:
    - **Transcript**: A file with verbatim Q&A (ask where to save)
-   - **Synthesised document**: A `WORKFLOW.md` reference document agents will follow
+   - **Synthesised document**: A `_docs/WORKFLOW.md` reference document agents will follow
 
 ## Questions
 
@@ -63,7 +63,7 @@ You are establishing the development workflow for a new project. The goal is to 
 
 ## Post-Interview
 
-- Write a synthesised `WORKFLOW.md` covering the full lifecycle
+- Write a synthesised `_docs/WORKFLOW.md` covering the full lifecycle
 - Include sections for: planning, branching, commits, PRs, review, testing, deployment, daily rhythm
 - Add a coding philosophy section if the conversation covered it
 - Use generic terms (developer, agent) instead of specific names for process steps

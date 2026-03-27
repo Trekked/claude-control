@@ -4,43 +4,40 @@ A set of templates, docs, and prompt interviews to help Claude work better with 
 
 Developed during the [Trekked](https://trekked.com) project and documented on [trekked.dev](https://trekked.dev). These templates are project-agnostic — drop them into any repo and start building shared context with your AI agents.
 
-## Templates
+## What's in the box
 
-### Discovery Interviews
+### Commands
 
-Run these during project setup to build context. Use `/interviews` to see which are complete and pick one to run.
+Slash commands for Claude Code. Copy to `.claude/commands/` in your project.
 
-| Template | Time | Purpose | Output | Blog Post |
-|----------|------|---------|--------|-----------|
-| `templates/onboard.md` | 20-30 min | Developer preferences, communication style | `~/.claude/CLAUDE.md` (global) | [The Travel Agents Part 2 — The Interview](https://trekked.dev/the-travel-agents-part-2) |
-| `templates/product-discovery.md` | 45-60 min | Product vision, users, features, business model | `_docs/PRODUCT.md` | |
-| `templates/workflow.md` | 30-40 min | Development process, GitHub flow, deployment | `_docs/WORKFLOW.md` | |
-| `templates/mindset.md` | 15-20 min | Coding philosophy, decision-making, trade-offs | Section in `_docs/WORKFLOW.md` | |
-| `templates/design-discovery.md` | 15-20 min | Visual identity, UI principles, accessibility | `_docs/DESIGN.md` | |
+| File | Command | Purpose |
+|------|---------|---------|
+| `commands/onboard.md` | `/onboard` | Developer preferences, communication style (20-30 min) |
+| `commands/interviews.md` | `/interviews` | Menu of all interviews with completion tracking |
 
-### Menu Command
+### Interviews
 
-| Template | Purpose |
-|----------|---------|
-| `templates/interviews.md` | Menu of discovery interviews with completion status — run via `/interviews` |
+Discovery interviews run during project setup. The `/interviews` command reads these from `_docs/interviews/`.
+
+| File | Time | Purpose | Output |
+|------|------|---------|--------|
+| `interviews/product-discovery.md` | 45-60 min | Vision, users, features, business model | `_docs/PRODUCT.md` |
+| `interviews/workflow.md` | 30-40 min | Development process, PRs, deployment | `_docs/WORKFLOW.md` |
+| `interviews/mindset.md` | 15-20 min | Coding philosophy, decision-making | Section in `_docs/WORKFLOW.md` |
+| `interviews/design-discovery.md` | 15-20 min | Visual identity, UI principles | `_docs/DESIGN.md` |
 
 ## How to Use
 
 ### Quick start
 
-Copy the templates you want into `.claude/commands/` in your project root to use them as slash commands:
+Clone this repo as your project's `_docs` directory, then copy the commands:
 
 ```bash
-# Copy all templates
-cp templates/*.md your-project/.claude/commands/
-
-# Or copy specific ones
-cp templates/onboard.md your-project/.claude/commands/onboard.md
-
-# Then in Claude Code
-/interviews    # See the menu
-/onboard       # Run directly
+git clone https://github.com/Trekked/claude-control.git _docs
+cp _docs/commands/*.md .claude/commands/
 ```
+
+The `/interviews` command already looks for templates in `_docs/interviews/` — no path changes needed.
 
 ### Project structure
 
@@ -48,30 +45,26 @@ cp templates/onboard.md your-project/.claude/commands/onboard.md
 your-project/
   .claude/
     commands/
-      interviews.md        # /interviews (menu)
-      onboard.md           # /onboard
-  _docs/
-    templates/             # Interview templates (referenced by /interviews)
+      interviews.md     # /interviews (menu)
+      onboard.md        # /onboard (direct)
+  _docs/                # This repo, cloned
+    interviews/
       product-discovery.md
       workflow.md
       mindset.md
       design-discovery.md
 ```
 
-The `/interviews` command looks for templates in `_docs/templates/` by default. If you store them elsewhere, update the paths in `interviews.md`.
+### Getting started
 
-### For a new project
+1. **Run `/onboard`** first — it shapes how the agent communicates across all projects
+2. **Run `/interviews`** to see what else is available and work through what matters
+3. **Not all interviews are needed** — a CLI tool doesn't need Design Discovery, a personal project may skip Workflow
 
-1. **Copy the templates** you need into `.claude/commands/` and `_docs/templates/`
-2. **Run `/interviews`** to see what's available and start with what matters most
-3. **Developer Onboarding** is the most important — do it first
-4. **Not all interviews are needed** — a CLI tool doesn't need Design Discovery, a personal project may skip Workflow
-
-### For onboarding a new team member
+### Onboarding a new team member
 
 1. Have them run `/onboard` to establish their personal preferences
 2. Point them at existing project docs — no need to re-interview
-3. Run the mindset interview only if they have significantly different coding philosophies
 
 ## Tips
 
@@ -80,4 +73,4 @@ The `/interviews` command looks for templates in `_docs/templates/` by default. 
 - **Review the output** — always have the human review synthesised documents before they become canonical
 - **Update over time** — re-run interviews or update docs as the project evolves
 - **Keep personal and project separate** — developer preferences go in `~/.claude/CLAUDE.md` (global), project docs go in the repo
-- **No secrets** — never store credentials, API keys, or sensitive personal information in context files. Stick to work preferences and communication style
+- **No secrets** — never store credentials, API keys, or sensitive personal information in context files

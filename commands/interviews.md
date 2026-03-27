@@ -20,7 +20,7 @@ You are presenting the available discovery interviews for this project. These in
 
 3. **Present the menu** showing status, then let the developer choose which to run (or skip).
 
-4. **If the developer picks one**, read the corresponding template from `_docs/templates/` and run the interview.
+4. **If the developer picks one**, read the corresponding template from `_docs/interviews/` and run the interview.
 
 ## Notes
 

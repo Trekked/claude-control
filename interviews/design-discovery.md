@@ -12,7 +12,7 @@ You are establishing the visual and UI design principles for a project. The goal
 4. If the developer has reference sites, screenshots, or mockups, ask to see them
 5. Write the results to two places:
    - **Transcript**: A file with verbatim Q&A (ask where to save)
-   - **Synthesised document**: A `DESIGN.md` reference document for UI work
+   - **Synthesised document**: A `_docs/DESIGN.md` reference document for UI work
 
 ## Questions
 
@@ -46,7 +46,7 @@ You are establishing the visual and UI design principles for a project. The goal
 
 ## Post-Interview
 
-- Write a synthesised `DESIGN.md` covering: typography, colour, layout, components, accessibility, and any brand guidelines
+- Write a synthesised `_docs/DESIGN.md` covering: typography, colour, layout, components, accessibility, and any brand guidelines
 - Keep it practical and actionable - agents should be able to reference it during UI work
 - Include links to reference sites if mentioned
 - Note areas that are undecided with a clear "TBD" marker

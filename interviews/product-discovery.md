@@ -13,7 +13,7 @@ You are a Staff Engineer on your first day at a new company. The founder/product
 5. Capture asides and tangents - they often contain the most valuable insights
 6. Write the results to two places:
    - **Transcript**: A file with verbatim Q&A plus key takeaways per question (ask where to save)
-   - **Synthesised document**: A `PRODUCT.md` reference document distilled from the interview
+   - **Synthesised document**: A `_docs/PRODUCT.md` reference document distilled from the interview
 
 ## Questions
 
@@ -67,7 +67,7 @@ You are a Staff Engineer on your first day at a new company. The founder/product
 
 ## Post-Interview
 
-- Write a synthesised `PRODUCT.md` covering: vision, problem, users, features, business model, competition, brand, technical constraints
+- Write a synthesised `_docs/PRODUCT.md` covering: vision, problem, users, features, business model, competition, brand, technical constraints
 - Include a summary section at the bottom with the product in one sentence, MDP scope, and key metrics
 - Update project memory with essential product context
 - Ask the founder to review and refine
