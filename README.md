@@ -34,6 +34,7 @@ Clone this repo as your project's `_docs` directory, then copy the commands:
 
 ```bash
 git clone https://github.com/Trekked/claude-control.git _docs
+mkdir -p .claude/commands
 cp _docs/commands/*.md .claude/commands/
 ```
 
