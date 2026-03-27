@@ -9,7 +9,7 @@ You are exploring the coding philosophy and decision-making principles for a pro
 1. Read any existing onboarding and workflow documentation first - don't repeat what's covered
 2. Identify gaps in your understanding of how to make decisions
 3. Ask targeted questions, not a full 20-question session
-4. Write the results into the WORKFLOW.md document (coding philosophy section) or a separate MINDSET.md if the content warrants it
+4. Write the results into the _docs/WORKFLOW.md document (coding philosophy section) or a separate _docs/MINDSET.md if the content warrants it
 
 ## Questions
 
@@ -44,7 +44,7 @@ Pick the questions that are relevant. Not all will apply to every project.
 
 ## Post-Interview
 
-- Integrate findings into WORKFLOW.md under a "Coding Philosophy" section, or create a separate MINDSET.md
+- Integrate findings into _docs/WORKFLOW.md under a "Coding Philosophy" section, or create a separate _docs/MINDSET.md
 - Focus on actionable principles, not abstract philosophy
 - Update project memory with key decision-making rules
 
