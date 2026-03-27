@@ -28,18 +28,23 @@ Run these during project setup to build context. Use `/interviews` to see which 
 
 ### Quick start
 
-Copy the templates you want into `.claude/commands/` in your project root to use them as slash commands:
+There are two types of files — **slash commands** and **interview templates**. Slash commands go in `.claude/commands/` so you can invoke them directly. Interview templates go in `_docs/templates/` where the `/interviews` menu looks for them.
 
 ```bash
-# Copy all templates
-cp templates/*.md your-project/.claude/commands/
+# Slash commands — these become /onboard and /interviews
+cp templates/onboard.md your-project/.claude/commands/
+cp templates/interviews.md your-project/.claude/commands/
 
-# Or copy specific ones
-cp templates/onboard.md your-project/.claude/commands/onboard.md
+# Interview templates — referenced by /interviews when you pick one
+mkdir -p your-project/_docs/templates
+cp templates/product-discovery.md your-project/_docs/templates/
+cp templates/workflow.md your-project/_docs/templates/
+cp templates/mindset.md your-project/_docs/templates/
+cp templates/design-discovery.md your-project/_docs/templates/
 
 # Then in Claude Code
-/interviews    # See the menu
-/onboard       # Run directly
+/interviews    # See the menu, pick an interview
+/onboard       # Run the onboarding interview directly
 ```
 
 ### Project structure
@@ -49,7 +54,7 @@ your-project/
   .claude/
     commands/
       interviews.md        # /interviews (menu)
-      onboard.md           # /onboard
+      onboard.md           # /onboard (direct)
   _docs/
     templates/             # Interview templates (referenced by /interviews)
       product-discovery.md
@@ -58,13 +63,13 @@ your-project/
       design-discovery.md
 ```
 
-The `/interviews` command looks for templates in `_docs/templates/` by default. If you store them elsewhere, update the paths in `interviews.md`.
+If you store templates elsewhere, update the paths in `interviews.md`.
 
 ### For a new project
 
-1. **Copy the templates** you need into `.claude/commands/` and `_docs/templates/`
-2. **Run `/interviews`** to see what's available and start with what matters most
-3. **Developer Onboarding** is the most important — do it first
+1. **Copy the files** as shown above — commands to `.claude/commands/`, templates to `_docs/templates/`
+2. **Run `/onboard`** first — it shapes how the agent communicates across all projects
+3. **Run `/interviews`** to see what else is available and work through what matters
 4. **Not all interviews are needed** — a CLI tool doesn't need Design Discovery, a personal project may skip Workflow
 
 ### For onboarding a new team member
